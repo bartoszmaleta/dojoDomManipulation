@@ -69,7 +69,6 @@ function createSquares(count) {
             let square = document.createElement("div");
             square.className = "squares";
             square.id = i.toString() + j.toString();
-            // cell.textContent = (`${j}${i}`);
             container.appendChild(square);
         }
     }
@@ -118,6 +117,11 @@ function game() {
     })
 };
 
-createSquares(10);
-fillSquares();
-game();
+
+function main() {
+    createSquares(10);
+    fillSquares();
+    game();
+}
+
+main();
