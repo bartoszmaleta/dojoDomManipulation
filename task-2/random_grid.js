@@ -5,8 +5,6 @@ function switchCellColor() {
         let random = Math.floor(Math.random() * (cells.length));
         cells[random].classList.add("active");
         setTimeout(() => setActive(cells, random), 500)
-        // cells[random].className -= " active";
-        // delete cells[random].className;
     }, 500);
 }
 
