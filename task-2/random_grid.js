@@ -4,17 +4,17 @@ function switchCellColor() {
     setInterval(function () {
         let random = Math.floor(Math.random() * (cells.length));
         cells[random].classList.add("active");
-        setTimeout(()=>setActive(cells,random), 500)
+        setTimeout(() => setActive(cells, random), 500)
         // cells[random].className -= " active";
         // delete cells[random].className;
     }, 500);
 }
 
-function setActive(cells,random) {
+function setActive(cells, random) {
     cells[random].classList.remove("active");
 }
 
-function generateGrid(width,height) {
+function generateGrid(width, height) {
     let container = document.querySelector('.container');
 
     for (let i = 0; i < height; i++) {
@@ -28,6 +28,9 @@ function generateGrid(width,height) {
         container.appendChild(row);
     }
 }
+function main() {
+    generateGrid(10, 10);
+    switchCellColor();
+};
 
-generateGrid(10,10);
-switchCellColor();
+main();
